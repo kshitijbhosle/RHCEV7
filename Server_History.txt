@@ -1,0 +1,255 @@
+    1  klsblk
+    2  lsblk
+    3  firewalld.richlanguage
+    4  manfirewalld.richlanguage
+    5  man firewalld.richlanguage
+    6  firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.2.2" service name="ssh" reject"
+    7  firewall-cmd --reload 
+    8  mkdir -p /tmp/mynfs
+    9  ls
+   10  vim /etc/exports
+   11  exportfs -av
+   12  ping client.example.com 
+   13  systemctl restart nfs-server
+   14  systemctl enable nfs-server
+   15  firewall-cmd --reload 
+   16  vim /etc/exports
+   17  exportfs -av
+   18  systemctl restart nfs-server
+   19  firewall-cmd --reload 
+   20  vim /etc/exports
+   21  history
+   22  firewall-cmd --permanent --add-service=nfs
+   23  firewall-cmd --reload 
+   24  ls /tmp/myfs
+   25  mkdir -p /tmp/mynfs
+   26  ls /tmp/
+   27  ls
+   28  systemctl restart nfs-server
+   29  firewall-cmd --reload 
+   30  ip a
+   31  hostname
+   32  yum install samba samba-client
+   33  vim /etc/samba/smb.conf
+   34  testparm -t
+   35  useradd samual
+   36  smbpasswd -a samual
+   37  setfacl -m u:samual:r-x /concert
+   38  mkdir /concert
+   39  setfacl -m u:samual:r-x /concert
+   40  systemctl restart smb nmb
+   41  systemctl enable smb nmb
+   42  firewall-cmd --permanent --add-service=samba
+   43  firewall-cmd --reload 
+   44  useradd mitchel
+   45  smbpasswd -a mitchel  
+   46  useradd catherine 
+   47  smbpasswd -a catherine 
+   48  mkdir /dockyard
+   49  man semanage fcontext 
+   50  semanage fcontext -a -t samba_share_t "/docyard(/.*)?"
+   51  man semanage fcontext 
+   52  restorecon -R -v /dockyard/
+   53  semanage fcontext -a -t samba_share_t "/concert(/.*)?"
+   54  restorecon -R -v /concert/
+   55  ls -Zd /concert/
+   56  ls -Zd /dockyard/
+   57  semanage fcontext -a -t samba_share_t "/dockyard(/.*)?
+   58  restorecon -R -v /dockyard/
+   59  vim /etc/samba/smb.conf
+   60  testparm -t
+   61  systemctl restar smb nmb
+   62  systemctl restart smb nmb
+   63  systemctl enable smb nmb
+   64  firewall-cmd --reload 
+   65  lsblk
+   66  reboot
+   67  ssh client
+   68  hsitory
+   69  history
+   70  lsblk
+   71  vgcreate myvg /dev/sdb
+   72  lvcreate -l 2GB myvg -n iscsi_block
+   73  lvcreate -L 2GB myvg -n iscsi_block
+   74  lvcreate -L 1.5GB myvg -n iscsi_block
+   75  lvs
+   76  yum install targect
+   77  firefox
+   78  targetcli 
+   79  systemctl restart targetcli
+   80  firewall-cmd --permanent --add-port=3260
+   81  firewall-cmd --permanent --add-port=3260/tcp
+   82  firewall-cmd --reload 
+   83  systemctl restart target
+   84  systemctl enable target
+   85  yum install httpd -y
+   86  cp /usr/share/doc/httpd-2.4.6/httpd-vhosts.conf /etc/httpd/conf.d/sample.conf
+   87  vim /var/www/html/index.html
+   88  vim /etc/httpd/conf.d/sample.conf
+   89  systemctl resatrt httpd
+   90  systemctl resatart httpd
+   91  systemctl restart httpd
+   92  systemctl enable httpd
+   93  firewall-cmd --permanent --add-service=http
+   94  firewall-cmd --reload 
+   95  firefox
+   96  vim /etc/hosts
+   97  vim /etc/httpd/conf.d/sample.conf
+   98  systemctl restart httpd
+   99  systemctl enable httpd
+  100  firewall-cmd --reload 
+  101  mkdir -p  /var/www/practice
+  102  vim  /var/www/practice/index.html
+  103  cp /etc/httpd/conf.d/sample.conf /etc/httpd/conf.d/virtual.conf
+  104  vim /etc/httpd/conf.d/virtual.conf
+  105  httpd -t
+  106  vim /etc/httpd/conf.d/virtual.conf
+  107  httpd -t
+  108  systemctl restart httpd
+  109  systemctl enable httpd
+  110  firewall-cmd --reload 
+  111  mkdir /var/www/html/notes
+  112  touch /var/www/html/notes/RedHat{1..10}
+  113  cd /etc/httpd/conf.d/
+  114  ls
+  115  cp sample.conf content.conf
+  116  vim content.conf
+  117  http -t
+  118  httpd -t
+  119  vim content.conf
+  120  httpd -t
+  121  systemctl restart httpd
+  122  systemctl enable httpd
+  123  firewall-cmd --reload 
+  124  ip a
+  125  vim content.conf
+  126  systemctl restart httpd
+  127  systemctl enable httpd
+  128  firewall-cmd --reload 
+  129  man req
+  130  man x509
+  131  man nmcli-examples
+  132  abrt-cli list --since 1605978732
+  133  openssl genrsa -out server.key 2048
+  134  openssl req -new -key server.key -out server.csr
+  135  openssl x509 -x509toreq -in server.cert -out server.csr -signkey server.key
+  136  openssl x509 req -in server.cert -out server.csr -signkey server.key
+  137  openssl x509 -x509toreq -in server.cert -out server.csr -signkey server.key
+  138  openssl x509 req -in server.cert -out server.csr -signkey server.key
+  139  openssl x509 req -in server.csr -out server.cart -signkey server.key
+  140  openssl x509 -x509toreq -in server.csr -out server.cert -signkey server.key
+  141  openssl x509 toreq -in server.csr -out server.cert -signkey server.key
+  142  3openssl x509 toreq -in server.csr -out server.cert -signkey server.key
+  143  ls
+  144  openssl x509 -req -in server.csr -out server.crt -signkey server.key
+  145  ls
+  146  cp server.key /etc/pki/tls/private/
+  147  cp server.crt /etc/pki/tls/certs/
+  148  yum install mod_ssl
+  149  ls
+  150  cp ssl.conf myssl.conf
+  151  vim myssl.conf 
+  152  httpd -t
+  153  systemctl restart httpd
+  154  systemctl enable httpd
+  155  firewall-cmd --reload 
+  156  vim myssl.conf 
+  157  systemctl restart httpd
+  158  systemctl enable httpd
+  159  firewall-cmd --reload 
+  160  vim myssl.conf 
+  161  vim sample.conf 
+  162  firewall-cmd --reload 
+  163  firewall-cmd --permanent --add-port=80/tcp
+  164  firewall-cmd --permanent --add-service=httpd
+  165  firewall-cmd --permanent --add-service=http
+  166  firewall-cmd --reload 
+  167  systemctl restart httpd
+  168  systemctl enable httpd
+  169  ping client
+  170  vim myssl.conf 
+  171  httpd -t
+  172  systemctl restart httpd
+  173  mkdir /var/www/dyanamic
+  174  vim /var/www/dyanamic/index.wsgi
+  175  yum install mod_wsgi
+  176  ls
+  177  cp sample.conf wsgi.conf
+  178  vim wsgi.conf
+  179  httpd -t
+  180  systemctl restart httpd
+  181  systemctl enable httpd
+  182  firewall-cmd --reload 
+  183  vim /etc/hosts
+  184  vim wsgi.conf
+  185  systemctl restart httpd
+  186  lws
+  187  cd /var/www/dyanamic/
+  188  ls
+  189  chmod a+x index.wsgi 
+  190  cd -
+  191  vim wsgi.conf
+  192  systemctl restart httpd
+  193  firewall-cmd --reload 
+  194  vim /etc/hosts
+  195  vim wsgi.conf
+  196  vim /etc/hosts
+  197  systemctl restart httpd
+  198  firewall-cmd --reload 
+  199  vim /etc/hosts
+  200  ls
+  201  ll
+  202  vim wsgi.conf 
+  203  systemctl restart httpd
+  204  firewall-cmd --reload 
+  205  vim /etc/hosts
+  206  semanage port 
+  207  man semanage port 
+  208  semanage port -a -t http_port_t -p tcp 8998
+  209  firewall-cmd --permanent --add-port=8998/tcp
+  210  firewall-cmd --reload 
+  211  vim wsgi.conf 
+  212  systemctl restart httpd
+  213  vim virtual.conf 
+  214  systemctl restart httpd
+  215  firewall-cmd --reload 
+  216  firewall-cmd --list-all
+  217  httpd -t
+  218  curl www1.example.com
+  219  curl server1.example.com
+  220  vim virtual.conf 
+  221  systemctl restart httpd
+  222  firewall-cmd --reload 
+  223  mkdir /nfsdata
+  224  vim /etc/exports
+  225  systemctl restart nfs
+  226  systemctl enable nfs
+  227  firewall-cmd --reload 
+  228  vim /etc/bashrc 
+  229  vim /root/condition
+  230  sh /root/condition 
+  231  sh /root/condition Linux
+  232  sh /root/condition Fedora
+  233  history
+  234  curl www1.example.com
+  235  curl server1.example.com
+  236  cat /root/condition 
+  237  ip a
+  238  #nmcli con add type team con-name Team1 ifname Team1 config team1-master-json.conf
+  239  man teamd.conf
+  240  nmcli connection add type team con-name Team0 ifname Team0 config '{"runner": {"name": "activebackup"}}'
+  241  nmcli con add type team-slave con-name port1 ifname ens37 master Team0
+  242  nmcli con add type team-slave con-name port2 ifname ens38 master Team0
+  243  nmcli connection modify Team0  ipv4.addresses "192.168.110.125/24"
+  244  nmcli connection modify Team0  ipv4.method static
+  245  nmcli connection down Team0;nmcli connection up Team0
+  246  nmcli connection up port1
+  247  nmcli connection up port2
+  248  nmcli connection sjow
+  249  nmcli connection show
+  250  teamdctl Team0 state
+  251  ping 192.168.110.125
+  252  history
+  253  qstat
+  254  reboot
+  255  history

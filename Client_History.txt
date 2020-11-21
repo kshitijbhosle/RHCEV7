@@ -1,0 +1,80 @@
+    1  mkdir /nfsdata
+    2  vim /etc/fstab 
+    3  mount -av
+    4  df -h
+    5  mount -av
+    6  df -h
+    7  vim /etc/fstab 
+    8  mount -av
+    9  ip a
+   10  cat /etc/hosts
+   11  yum install nfs
+   12  yum install nfs-server
+   13  vim /etc/fstab 
+   14  mount -av
+   15  df -h
+   16  vim /etc/fstab 
+   17  mount -av
+   18  ls /nfsdata/
+   19  vim /etc/fstab 
+   20  mount -av
+   21  vim /etc/fstab 
+   22  yum install nfs-utils.x86_64 
+   23  mount -av
+   24  vim /etc/fstab 
+   25  mount -av
+   26  vim /etc/fstab 
+   27  mount -av
+   28  systemctl restart nfs
+   29  mount -av
+   30  yum install samba-client util-linux.x86_64 
+   31  mkdir /data
+   32  vim /etc/fstab 
+   33  yum install cifs-utils-devel.
+   34  yum install cifs-utils-devel
+   35  mount -av
+   36  df -h
+   37  yum install iscsi-initiator-utils
+   38  vim /etc/iscsi/initiatorname.iscsi 
+   39  man iscsiadm 
+   40  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.220.134 --discover
+   41  man iscsiadm 
+   42  iscsiadm --mode node --targetname iqn.2017-18.com.example.network1:system2 --portal 192.168.220.134 --login
+   43  systemctl restart iscsi
+   44  systemctl restart iscsid
+   45  iscsiadm --mode node --targetname iqn.2017-18.com.example.network1:system2 --portal 192.168.220.134 --login
+   46  vim /etc/iscsi/initiatorname.iscsi 
+   47  iscsiadm --mode node --targetname iqn.2017-18.com.example.network1:system2 --portal 192.168.220.134 --login
+   48  iscsiadm --mode discoverydb --type sendtargets --portal 192.168.220.134 --discover
+   49  iscsiadm --mode node --targetname iqn.2017-18.com.example.network1:system2 --portal 192.168.220.134 --login
+   50  systemctl restart iscsi
+   51  systemctl restart iscsid
+   52  iscsiadm --mode node --targetname iqn.2017-18.com.example.network1:system2 --portal 192.168.220.134 --login
+   53  mkdir /shareddisk
+   54  lsblk
+   55  fdisk /dev/sdb
+   56  partport
+   57  partporb
+   58  partprob
+   59  partprobe
+   60  mkfs.ext4 /dev/sdb1
+   61  vim /etc/fstab 
+   62  mount -av
+   63  df -h
+   64  iscsiadm --mode node --targetname iqn.2017-18.com.example.network1:system2 --portal 192.168.220.134 --logout
+   65  systemctl restart iscsi
+   66  systemctl restart iscsid
+   67  iscsiadm --mode node --targetname iqn.2017-18.com.example.network1:system2 --portal 192.168.220.134 --logout
+   68  df -h
+   69  vim /etc/hosts
+   70  cat /etc/hosts
+   71  vim /etc/hosts
+   72  firewall-cmd --permanent --add-service=https
+   73  firewall-cmd --reload 
+   74  systemctl status iscsi
+   75  systemctl status iscsid
+   76  mkdir /nfs
+   77  vim /etc/fstab 
+   78  mount -av
+   79  df -h
+   80  history
